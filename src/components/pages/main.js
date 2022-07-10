@@ -86,12 +86,12 @@ export function Main(){
                 }
             />
         </section>
-        <section className='mt-10'>
+        {/* <section className='mt-10'>
             <Header title="Websites that I maitain" />
-        </section>
-        <section className='mt-10'>
+        </section> */}
+        {/* <section className='mt-10'>
             <Header title="The fun part" />
-        </section>
+        </section> */}
         <section className='mt-10'>
             <Header title="Check out my blog" />
             <div className='flex gap-20 overflow-x-scroll mt-5 py-16 md:px-16'>
@@ -110,6 +110,9 @@ export function Main(){
                     )
                 })}
             </div>
+        </section>
+        <section className='mt-10'>
+            <Header title="Get in touch" />
         </section>
         </motion.div>
     )
