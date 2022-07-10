@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+a,p,h1,h2{
+  font-family: 'Poppins', sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+nav{
+  transition: all 500ms ease;
+  margin: 0 auto;
+
+}
+@media only screen and (min-width: 764px) {
+  nav{
+      margin: 0 auto;
+      max-width: 80%;
+  }
+}
+a:hover{
+  text-decoration:  underline;
+
+}
