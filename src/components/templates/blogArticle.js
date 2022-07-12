@@ -9,8 +9,8 @@ export default function BlogArticle(){
     const [blog, setBlog] = useState([])
     useEffect(() => {
         const getBlog = async () => {
-            const blogRef = doc(db, "blog", blogid.id) //database, "blogs" collection, document with id
-            const data = await getDoc(blogRef);
+            const blogRef = doc(db, "blog", blogid.id)
+            const data = await getDoc(blogRef)
             if (data.exists()) {
                 setBlog(data.data())
             }
@@ -24,6 +24,7 @@ export default function BlogArticle(){
         exit={{opacity: 0, transition: {duration: 0.6}}}
         >
             <Header title={blog.title} class="mt-[0px] pt-24 max-w-2xl" />
+            <div dangerouslySetInnerHTML={{ __html: blog.content }} />
         </motion.div>
     )
 }
