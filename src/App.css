@@ -21,3 +21,15 @@ a:hover{
   text-decoration:  underline;
 
 }
+code{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  background-color: rgb(44, 44, 44);
+  color: white;
+  overflow: scroll;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 1000px;
+  white-space:nowrap;
+}
