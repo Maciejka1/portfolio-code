@@ -15,9 +15,11 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { useEffect, useState } from 'react'
 import { db } from "../firebase/firebase-conf"
 import { getDocs, collection } from 'firebase/firestore'
+
 export function Header(props){
-    return <h1 className={'font-bold text-5xl md:text-6xl mt-24' + props.class}>{props.title}</h1>
+    return <h1 className={'font-bold text-5xl md:text-6xl mt-24 header ' + props.class}>{props.title}</h1>
 }
+
 export function Main(){
     const [posts, setPosts] = useState([])
     useEffect(() => {
@@ -36,7 +38,7 @@ export function Main(){
          animate={{opacity: 1, transition: {duration: 2}}}
          exit={{opacity: 0}}
          >
-        <section>
+        <section>  
             <div className="h-[100vh] flex justify-center items-center">
                     <motion.div className="max-w-[650px] "
                     initial={{x: -100}}

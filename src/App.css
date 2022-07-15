@@ -6,6 +6,9 @@ a,p,h1,h2{
 html{
   scroll-behavior: smooth;
 }
+.header{
+  text-shadow: 4px 4px #2aff3a57, -4px -4px #7d18ff54;
+}
 nav{
   transition: all 500ms ease;
   margin: 0 auto;
