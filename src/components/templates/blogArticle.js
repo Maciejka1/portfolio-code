@@ -24,25 +24,8 @@ export default function BlogArticle(){
         exit={{opacity: 0, transition: {duration: 0.6}}}
         >
             <Header title={blog.title} class="mt-[0px] pt-24 max-w-4xl" />
-            {/* <div dangerouslySetInnerHTML={{ __html: blog.content }} /> */}
-            <div className="mt-10">
-                <p className="text-xl max-w-4xl">
-                    
-                </p>
-                <ul className="list-decimal text-3xl font-bold ml-8 mt-10">
-                    <li>
-                        <h2></h2>
-                        <div className="text-xl font-normal">
-                            <p>
-                                
-                            </p>
-                            <code>
+            <div dangerouslySetInnerHTML={{ __html: blog.content }} />
 
-                            </code>
-                        </div>
-                    </li>
-                </ul>
-            </div>
         </motion.div>
     )
 }
