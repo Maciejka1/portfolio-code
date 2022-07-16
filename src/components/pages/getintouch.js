@@ -1,5 +1,11 @@
 import {motion} from 'framer-motion'
 import { Header } from './main'
+import zero from '../images/contactBg/0.jpg'
+import one from '../images/contactBg/1.jpg'
+import two from '../images/contactBg/2.jpg'
+const imagesArray = [zero, one, two]
+const randomNumber = Math.floor(Math.random() * 3)
+
 export default function GetInTouch() {
 
   return (
@@ -10,8 +16,17 @@ export default function GetInTouch() {
     >
         <div>
           <Header title="Get in touch"/>
-          <div>
-            sdafsdf
+          <div className='mt-10'>
+            <form action="" style={{backgroundImage: `url(${imagesArray[randomNumber]}) `}} className="contactBg rounded-3xl gap-2 text-2xl flex flex-col justify-center items-center h-96 text-white">
+              <div className='flex gap-2'>
+                <label for="email">Enter your contact email</label>
+                <input type="email" className='text-black rounded-xl'/>
+              </div>
+              <div className='flex gap-2'>
+                <label for="email">Enter your name</label>
+                <input type="email" className='text-black rounded-xl'/>
+              </div>
+            </form>
           </div>
         </div>
     </motion.div>

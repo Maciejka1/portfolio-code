@@ -6,6 +6,10 @@ a,p,h1,h2{
 html{
   scroll-behavior: smooth;
 }
+.contactBg{
+  background-position: center;
+  background-size: cover;
+}
 .header{
   text-shadow: 4px -4px #2aff3a57, -4px 4px #7d18ff54;
 }
