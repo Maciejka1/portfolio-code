@@ -15,6 +15,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { useEffect, useState } from 'react'
 import { db } from "../firebase/firebase-conf"
 import { getDocs, collection } from 'firebase/firestore'
+import GetInTouch from './getintouch'
 
 export function Header(props){
     return <h1 className={'font-bold text-5xl md:text-6xl mt-24 header ' + props.class}>{props.title}</h1>
@@ -114,7 +115,7 @@ export function Main(){
             </div>
         </section>
         <section className='mt-10'>
-            <Header title="Get in touch" />
+            <GetInTouch/>
         </section>
         </motion.div>
     )

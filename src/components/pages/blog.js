@@ -16,7 +16,7 @@ export default function Blog(){
     fetchPosts()
   }, [])
     return(
-        <motion.div className="md:px-0 mx-auto py-10 px-2 max-w-[1424px]"
+        <motion.div className="md:px-0 mx-auto py-10 px-2 max-w-[1424px] min-h-[95vh]"
         initial={{opacity: 0}}
         animate={{opacity: 1, transition: {duration: 2}}}
         exit={{opacity: 0, transition: {duration: 0.6}}}
