@@ -75,7 +75,7 @@ export function Main(){
             />
             <Projects
                 title="Mero Studios"
-                desc="Mero Studios is a small group of game developers who are developing games. Right now they are working on Never Found game."
+                desc="Mero Studios is a small group of passionate game developers. Right now they are working on Never Found game. Website was built with react and tailwindcss."
                 buttonColor="bg-gray-800 hover:bg-gray-900"
                 additionalStyling="sm:order-2"
                 isWorkInProgress = {true}
@@ -98,16 +98,16 @@ export function Main(){
         <section className='mt-10'>
             <Header title="Check out my blog" />
             <div className='flex gap-20 overflow-x-scroll mt-5 py-16 md:px-16'>
-                {posts.map((props) => {
+                {posts.map((data) => {
                     return(
-                    <Link to={"/blog/" + props.title.split(" ").join("-").toLowerCase()} key={props.title} className='hover:no-underline min-w-[400px] rounded-3xl bg-white overflow-hidden shadow-2xl'>
+                    <Link to={"/blog/" + data.title.split(" ").join("-").toLowerCase()} key={data.title} className='hover:no-underline min-w-[400px] rounded-3xl bg-white overflow-hidden shadow-2xl'>
                         <div>
-                            <LazyLoadImage src={props.img}/>
+                            <LazyLoadImage src={data.img} />
                         </div>
                         <div className="p-5">
-                            <h2 className="text-4xl font-bold">{props.title}</h2>
-                            <p className="text-gray-400 mb-4">Jul 9 2022</p>
-                            <p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum ea sed dolore obcaecati quibusdam necessitatibus nobis. Obcaecati, unde dolor. </p>
+                            <h2 className="text-4xl font-bold">{data.title}</h2>
+                            <p className="text-gray-400 mb-4">{data.date}</p>
+                            <p className="text-xl">{data.desc} </p>
                         </div>
                     </Link>
                     )

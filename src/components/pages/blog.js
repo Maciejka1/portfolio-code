@@ -24,16 +24,16 @@ export default function Blog(){
             <div>
               <Header title="Blog"/>
               <div className="flex flex-wrap mt-12 gap-12">
-                {posts.map((props) => {
+                {posts.map((data) => {
                         return(
-                        <Link to={"/blog/" + props.title.split(" ").join("-").toLowerCase()} key={props.title} className='hover:no-underline rounded-3xl bg-white overflow-hidden shadow-2xl w-96 '>
+                        <Link to={"/blog/" + data.title.split(" ").join("-").toLowerCase()} key={data.title} className='hover:no-underline rounded-3xl bg-white overflow-hidden shadow-2xl w-96 '>
                             <div>
-                                <LazyLoadImage src={props.img}/>
+                                <LazyLoadImage src={data.img}/>
                             </div>
                             <div className="p-5">
-                                <h2 className="text-4xl font-bold">{props.title}</h2>
-                                <p className="text-gray-400 mb-4">Jul 9 2022</p>
-                                <p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum ea sed dolore obcaecati quibusdam necessitatibus nobis. Obcaecati, unde dolor. </p>
+                                <h2 className="text-4xl font-bold">{data.title}</h2>
+                                <p className="text-gray-400 mb-4">{data.date}</p>
+                                <p className="text-xl">{data.desc}</p>
                             </div>
                         </Link>
                         )
