@@ -79,7 +79,7 @@ export function Main(){
                 buttonColor="bg-gray-800 hover:bg-gray-900"
                 additionalStyling="sm:order-2"
                 isWorkInProgress = {true}
-                linkToWebsite = "https://merostudios.netlify.app"
+                linkToWebsite = "https://mero-studios.vercel.app"
                 images={
                     {
                         tablet: tabletMS,
