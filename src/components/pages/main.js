@@ -107,7 +107,7 @@ export function Main(){
                         <div className="p-5">
                             <h2 className="text-4xl font-bold">{data.title}</h2>
                             <p className="text-gray-400 mb-4">{data.date}</p>
-                            <p className="text-xl">{data.desc} </p>
+                            <p className="text-xl font-normal">{data.desc} </p>
                         </div>
                     </Link>
                     )
