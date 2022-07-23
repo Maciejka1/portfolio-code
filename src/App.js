@@ -1,6 +1,6 @@
 import './App.css';
 import {BrowserRouter as Router} from 'react-router-dom'
-import Nav from './components/templates/nav'
+import Nav from './components/templates/nav/nav'
 import Footer from './components/templates/footer'
 import LoadingAnimation from './components/loadingAnimation';
 function App() {

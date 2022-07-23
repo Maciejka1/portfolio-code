@@ -1,7 +1,8 @@
 import React from 'react'
-import logo from '../images/logo.webp'
+import logo from '../../images/logo.webp'
 import {FaYoutube, FaGithub, FaDiscord, FaBars, FaTimes} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
+import './nav.module.css'
 function Nav(){
     const [navControl, setNavControl] = React.useState()
     const windowWidth = window.screen.availWidth

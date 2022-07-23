@@ -1,7 +1,7 @@
-import { Header } from "../pages/main"
+import { Header } from "../main/main"
 import { motion } from "framer-motion"
 import { useEffect, useState } from 'react'
-import {db} from "../firebase/firebase-conf"
+import {db} from "../../firebase/firebase-conf"
 import {getDocs, collection} from 'firebase/firestore'
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import { Link } from "react-router-dom"

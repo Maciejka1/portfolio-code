@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
-import { db } from "../firebase/firebase-conf"
+import { db } from "../../firebase/firebase-conf"
 import { getDoc, doc } from "firebase/firestore"
 import { useParams } from "react-router-dom"
 import { motion } from "framer-motion"
-import { Header } from "../pages/main"
+import { Header } from "../../pages/main/main"
+import './blogArticle.module.css'
 export default function BlogArticle(){
     const blogid  =  useParams()
     const [blog, setBlog] = useState([])

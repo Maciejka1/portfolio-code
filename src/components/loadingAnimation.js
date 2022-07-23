@@ -1,9 +1,9 @@
-import {Main} from './pages/main'
-import GetInTouch from './pages/getintouch'
+import {Main} from './pages/main/main'
+import GetInTouch from './pages/getintouch/getintouch'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import {AnimatePresence} from 'framer-motion'
-import Blog from './pages/blog'
-import BlogArticle from './templates/blogArticle'
+import Blog from './pages/blog/blog'
+import BlogArticle from './templates/blogArticle/blogArticle'
 function LoadingAnimation(){
     const location = useLocation()
     return(

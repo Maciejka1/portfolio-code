@@ -1,24 +1,24 @@
-import ipMS from '../images/iphoneMS.png' //MS Mero Studios
-import tabletMS from '../images/tabletMS.png'
-import monitorMS from '../images/monitorMS.png'
+import ipMS from '../../images/iphoneMS.png' //MS Mero Studios
+import tabletMS from '../../images/tabletMS.png'
+import monitorMS from '../../images/monitorMS.png'
 
-import ipDS from '../images/iphoneDS.png' // DS Dziki Staw
-import tabletDS from '../images/tabletDS.png'
-import monitorDS from '../images/monitorDS.png'
+import ipDS from '../../images/iphoneDS.png' // DS Dziki Staw
+import tabletDS from '../../images/tabletDS.png'
+import monitorDS from '../../images/monitorDS.png'
 
 import {motion} from 'framer-motion'
 import {FaArrowDown} from 'react-icons/fa'
 
-import Projects from '../templates/projects'
+import Projects from '../../templates/projects'
 import { Link } from 'react-router-dom'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { useEffect, useState } from 'react'
-import { db } from "../firebase/firebase-conf"
+import { db } from "../../firebase/firebase-conf"
 import { getDocs, collection } from 'firebase/firestore'
-import GetInTouch from './getintouch'
-
+import GetInTouch from '../getintouch/getintouch'
+import './main.modules.css'
 export function Header(props){
-    return <h1 className={'font-bold text-5xl md:text-6xl mt-24 header ' + props.class}>{props.title}</h1>
+    return <h1 className={'font-bold text-5xl md:text-6xl header mt-24 ' + props.class}>{props.title}</h1>
 }
 
 export function Main(){
@@ -34,7 +34,7 @@ export function Main(){
 
     return(
         <motion.div
-         className="xl:px-0 mx-auto px-2 max-w-[1424px] mb-60 "
+         className="xl:px-0 mx-auto px-2 max-w-[1424px]"
          initial={{opacity: 0}}
          animate={{opacity: 1, transition: {duration: 2}}}
          exit={{opacity: 0}}
