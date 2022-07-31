@@ -7,7 +7,7 @@ export default function GetInTouch() {
   const imagesArray = [zero, one, two]
   const randomNumber = Math.floor(Math.random() * 3)
   return (
-    <motion.div className="md:px-0 mx-auto py-10 px-2 max-w-[1424px] min-h-[95vh]"
+    <motion.div className="py-10 min-h-[95vh] container"
     initial={{opacity: 0}}
     animate={{opacity: 1, transition: {duration: 2}}}
     exit={{opacity: 0, transition: {duration: 0.6}}}

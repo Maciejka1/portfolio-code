@@ -17,7 +17,7 @@ export default function BlogArticle(){
         getBlog()
     }, [blogid])
     return(
-        <motion.div className="xl:px-0 mx-auto px-2 pt-24 mb-60  max-w-[1424px]"
+        <motion.div className="pt-24 mb-60 container"
         initial={{opacity: 0}}
         animate={{opacity: 1, transition: {duration: 2}}}
         exit={{opacity: 0, transition: {duration: 0.6}}}

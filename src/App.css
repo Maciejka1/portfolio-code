@@ -25,3 +25,6 @@ code{
   text-shadow: 4px -4px #2aff3a57, -4px 4px #7d18ff54;
   @apply font-bold text-5xl md:text-6xl mt-24
 }
+.container{
+  @apply xl:px-0 mx-auto px-2 max-w-[1424px]
+}

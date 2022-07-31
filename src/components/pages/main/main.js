@@ -29,7 +29,7 @@ export default function Main(){
 
     return(
         <motion.div
-         className="xl:px-0 mx-auto px-2 max-w-[1424px]"
+        className='container'
          initial={{opacity: 0}}
          animate={{opacity: 1, transition: {duration: 2}}}
          exit={{opacity: 0}}
