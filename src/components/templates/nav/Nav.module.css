@@ -1,9 +1,9 @@
-nav{
+.nav{
     transition: all 500ms ease;
     margin: 0 auto;
 }
 @media only screen and (min-width: 764px) {
-    nav{
+    .nav{
         margin: 0 auto;
         max-width: 80%;
     }

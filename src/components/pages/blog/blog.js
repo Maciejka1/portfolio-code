@@ -1,4 +1,3 @@
-import { Header } from "../main/main"
 import { motion } from "framer-motion"
 import { useEffect, useState } from 'react'
 import {db} from "../../firebase/firebase-conf"
@@ -22,7 +21,7 @@ export default function Blog(){
         exit={{opacity: 0, transition: {duration: 0.6}}}
         >
             <div>
-              <Header title="Blog"/>
+              <h1 className='header'>Blog</h1>
               <div className="flex flex-wrap mt-12 gap-12">
                 {posts.map((data) => {
                         return(

@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../../images/logo.webp'
 import {FaYoutube, FaGithub, FaDiscord, FaBars, FaTimes} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
-import './nav.module.css'
+import styles from './Nav.module.css'
 function Nav(){
     const [navControl, setNavControl] = React.useState()
     const windowWidth = window.screen.availWidth
@@ -23,7 +23,7 @@ function Nav(){
                   <FaBars/>
               </div>
           </div>
-          <nav className="flex flex-col right-[-100%] items-center justify-center w-screen h-screen bg-white fixed md:justify-between md:w-[1224px] md:h-12 md:right-0 md:left-0 md:flex-row md:rounded-full z-20 " style={{right: navControl}}> 
+          <nav className={"flex flex-col right-[-100%] items-center justify-center w-screen h-screen bg-white fixed md:justify-between md:w-[1224px] md:h-12 md:right-0 md:left-0 md:flex-row md:rounded-full z-20 " + styles.nav} style={{right: navControl}}> 
 
           <div className="h-full md:flex items-center hidden">
               <img src={logo} alt="logo" className="m-0 h-full rounded-none"/>

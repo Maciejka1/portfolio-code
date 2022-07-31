@@ -16,12 +16,7 @@ import { useEffect, useState } from 'react'
 import { db } from "../../firebase/firebase-conf"
 import { getDocs, collection } from 'firebase/firestore'
 import GetInTouch from '../getintouch/getintouch'
-import './main.modules.css'
-export function Header(props){
-    return <h1 className={'font-bold text-5xl md:text-6xl header mt-24 ' + props.class}>{props.title}</h1>
-}
-
-export function Main(){
+export default function Main(){
     const [posts, setPosts] = useState([])
     useEffect(() => {
         const postRef = collection(db, "blog")
@@ -56,7 +51,7 @@ export function Main(){
             </div>
         </section>
         <section id="portfolio" className='pt-12'>
-            <Header title="My previous projects" />
+            <h1 className='header'>My previous projects</h1>
             <Projects
                 title="Dziki staw"
                 desc="Dziki staw is a small sauna business that runs in my city.
@@ -89,14 +84,8 @@ export function Main(){
                 }
             />
         </section>
-        {/* <section className='mt-10'>
-            <Header title="Websites that I maitain" />
-        </section> */}
-        {/* <section className='mt-10'>
-            <Header title="The fun part" />
-        </section> */}
         <section className='mt-10'>
-            <Header title="Check out my blog" />
+            <h1 className='header'>Check out my blog</h1>
             <div className='flex gap-20 overflow-x-scroll mt-5 py-16 md:px-16'>
                 {posts.map((data) => {
                     return(

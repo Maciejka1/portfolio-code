@@ -1,5 +1,4 @@
 import {motion} from 'framer-motion'
-import { Header } from '../main/main'
 import zero from '../../images/contactBg/0.jpg'
 import one from '../../images/contactBg/1.jpg'
 import two from '../../images/contactBg/2.jpg'
@@ -14,7 +13,7 @@ export default function GetInTouch() {
     exit={{opacity: 0, transition: {duration: 0.6}}}
     >
         <div>
-          <Header title="Get in touch"/>
+          <h1 className='header'>Get in touch</h1>
           <div className='mt-10'>
             <div style={{backgroundImage: `url(${imagesArray[randomNumber]}) `}} className="p-2 bg-center bg-cover rounded-3xl gap-2 flex flex-col text-xl justify-center items-center h-96 text-black contactBg">
               <div className='bg-white p-5 rounded-2xl'>

@@ -9,3 +9,19 @@ a:hover{
   text-decoration:  underline;
 
 }
+code{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  background-color: rgb(44, 44, 44);
+  color: white;
+  overflow: scroll;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 1000px;
+  white-space:nowrap;
+}
+.header{
+  text-shadow: 4px -4px #2aff3a57, -4px 4px #7d18ff54;
+  @apply font-bold text-5xl md:text-6xl mt-24
+}
