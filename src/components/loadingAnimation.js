@@ -14,7 +14,7 @@ function LoadingAnimation(){
             <Route path='/contact' element={<GetInTouch/>} />
             <Route path='/blog' element={<Blog/>}/>
             <Route path='/blog/:id' element={<BlogArticle/>}/>
-            <Route path='*' element={Error}/>
+            <Route path='*' element={<Error/>}/>
         </Routes>
     </AnimatePresence>
     )
