@@ -27,7 +27,7 @@ export default function Projects(props){
                 <p className='text-2xl my-4'>
                     {props.desc}
                 </p>
-                <a href={props.linkToWebsite} target="blank" className={props.buttonColor + ' transition-all hover:p-2 p-1 rounded-full font-bold text-white text-xl'}>
+                <a href={props.linkToWebsite} target="blank" className={props.buttonColor + ' transition-all hover:p-3image.png p-2 rounded-full font-bold text-white text-xl'}>
                     Check out this website
                 </a>
             </div>
