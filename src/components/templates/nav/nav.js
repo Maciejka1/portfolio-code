@@ -14,9 +14,9 @@ function Nav(){
     this variable as undefined because it would break styling when clicking on pc*/
     return (
       <div>
-            <div className="flex items-center md:hidden z-30 fixed m-2 top-0 left-0">
+            <div className="flex  items-center md:hidden z-30 fixed m-2 top-0 left-0">
                 <img src={logo} alt="logo" className="h-14"/>
-                <p className="text-lg">Maciejka</p>
+                <p className="text-lg pl-2">Maciejka</p>
             </div>
           <div onClick={() => setNavControl('0')}>
               <div className="open-menu fixed m-5 text-4xl top-0 right-0 md:hidden z-20" >
