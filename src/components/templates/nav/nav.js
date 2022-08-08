@@ -8,20 +8,16 @@ function Nav(){
     const windowWidth = window.screen.availWidth
     let resizeNavOnClick
     windowWidth <= 768 ? resizeNavOnClick = () => setNavControl('-100%') : resizeNavOnClick = undefined
-    /*Without this, nav when clicking on link would stay in right: 0 style which is "showing" nav.
-    This code checks if user is under screen resolution that triggers mobile look. If it is it declares
-    resizeNavOnClick as function which closes nav. If user is on screen that has 769px or more it declares
-    this variable as undefined because it would break styling when clicking on pc*/
     return (
       <div>
-            <div className="flex  items-center md:hidden z-30 fixed m-2 top-0 left-0">
+            <div className="flex items-center md:hidden z-30 fixed m-2 top-0 left-0">
                 <img src={logo} alt="logo" className="h-14"/>
                 <p className="text-lg pl-2">Maciejka</p>
             </div>
           <div onClick={() => setNavControl('0')}>
-              <div className="open-menu fixed m-5 text-4xl top-0 right-0 md:hidden z-20" >
+              <div className="fixed m-5 text-4xl top-0 right-0 md:hidden z-20" >
                   <FaBars/>
-              </div>
+              </div> 
           </div>
           <nav className={"flex flex-col right-[-100%] items-center justify-center w-screen h-screen bg-white fixed md:justify-between md:w-[1224px] md:h-12 md:right-0 md:left-0 md:flex-row md:rounded-full z-20 " + styles.nav} style={{right: navControl}}> 
 
