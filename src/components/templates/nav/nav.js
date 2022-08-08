@@ -10,19 +10,14 @@ function Nav(){
     windowWidth <= 768 ? resizeNavOnClick = () => setNavControl('-100%') : resizeNavOnClick = undefined
     return (
       <div>
-            <div className="flex items-center md:hidden z-30 fixed m-2 top-0 left-0">
-                <img src={logo} alt="logo" className="h-14"/>
-                <p className="text-lg pl-2">Maciejka</p>
-            </div>
           <div onClick={() => setNavControl('0')}>
               <div className="fixed m-5 text-4xl top-0 right-0 md:hidden z-20" >
                   <FaBars/>
               </div> 
           </div>
           <nav className={"flex flex-col right-[-100%] items-center justify-center w-screen h-screen bg-white fixed md:justify-between md:w-[1224px] md:h-12 md:right-0 md:left-0 md:flex-row md:rounded-full z-20 " + styles.nav} style={{right: navControl}}> 
-
-          <div className="h-full md:flex items-center hidden">
-              <img src={logo} alt="logo" className="m-0 h-full rounded-none"/>
+          <div className="md:h-full flex items-center z-30 md:static fixed m-2 top-0 left-0">
+              <img src={logo} alt="logo" className="h-14 md:h-full rounded-none"/>
               <p className="ml-2 text-lg">Maciejka</p>
           </div>
 
