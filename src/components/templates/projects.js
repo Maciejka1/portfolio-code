@@ -27,9 +27,14 @@ export default function Projects(props){
                 <p className='text-2xl my-4'>
                     {props.desc}
                 </p>
-                <a href={props.linkToWebsite} target="blank" className={props.buttonColor + ' transition-all hover:p-3 p-2 rounded-full font-bold text-white text-xl hover:no-underline'}>
-                    Check out this website
-                </a>
+                <div className='flex flex-wrap gap-2'>
+                    <a href={props.linkToWebsite} target="blank" className={props.buttonColor + ' transition-all hover:p-3 p-2 rounded-full font-bold text-white text-xl hover:no-underline'}>
+                        Check out this website
+                    </a>
+                    <a href={props.code} target="blank" className={props.buttonColor + ' transition-all hover:p-3 p-2 rounded-full font-bold text-white text-xl hover:no-underline'}>
+                        View the code
+                    </a>
+                </div>
             </div>
             <a href={props.linkToWebsite} target="blank" className='flex flex-wrap justify-center items-center gap-5 mt-4'>
                 <div className="w-[400px]">
@@ -40,7 +45,7 @@ export default function Projects(props){
                 </div>
                 <div className="w-[400px]">
                     <LazyLoadImage src={props.images.monitor} alt="website displayed on monitor" />
-                </div> 
+                </div>
             </a>
         </motion.div>
     </article>

@@ -34,7 +34,7 @@ export default function Main(){
          animate={{opacity: 1, transition: {duration: 2}}}
          exit={{opacity: 0}}
          >
-        <section>  
+        <section>
             <div className="h-[100vh] flex justify-center items-center">
                     <motion.div className="max-w-[650px] "
                     initial={{x: -100}}
@@ -59,6 +59,7 @@ export default function Main(){
                 buttonColor="bg-green-300 hover:bg-green-400"
                 additionalStyling=""
                 isWorkInProgress = {false}
+                code = "https://github.com/Maciejka1/dzikistaw-code"
                 linkToWebsite = "https://dzikistaw.pl"
                 images={
                     {
@@ -74,6 +75,7 @@ export default function Main(){
                 buttonColor="bg-gray-800 hover:bg-gray-900"
                 additionalStyling="sm:order-2"
                 isWorkInProgress = {true}
+                code = "https://github.com/Maciejka1/mero-studios"
                 linkToWebsite = "https://mero-studios.vercel.app"
                 images={
                     {
