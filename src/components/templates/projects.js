@@ -28,10 +28,10 @@ export default function Projects(props){
                     {props.desc}
                 </p>
                 <div className='flex flex-wrap gap-2'>
-                    <a href={props.linkToWebsite} target="blank" className={props.buttonColor + ' transition-all hover:p-3 p-2 rounded-full font-bold text-white text-xl hover:no-underline'}>
+                    <a href={props.linkToWebsite} target="blank" className={props.buttonColor + ' transition-all p-2 rounded-full font-bold text-white text-xl hover:no-underline'}>
                         Check out this website
                     </a>
-                    <a href={props.code} target="blank" className={props.buttonColor + ' transition-all hover:p-3 p-2 rounded-full font-bold text-white text-xl hover:no-underline'}>
+                    <a href={props.code} target="blank" className={props.buttonColor + ' transition-all p-2 rounded-full font-bold text-white text-xl hover:no-underline'}>
                         View the code
                     </a>
                 </div>
