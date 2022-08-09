@@ -3,6 +3,7 @@ import { db } from "../../firebase/firebase-conf"
 import { getDoc, doc } from "firebase/firestore"
 import { useParams } from "react-router-dom"
 import { motion } from "framer-motion"
+import { renderToString } from 'react-dom/server'
 export default function BlogArticle(){
     const blogid  =  useParams()
     const [blog, setBlog] = useState([])

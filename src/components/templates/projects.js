@@ -15,7 +15,7 @@ export default function Projects(props){
             
     }, [inView, opacityAnimation])
     return(
-        <article className='mt-[10vh]' ref={ref}>
+        <article className='mt-[10vh] list-none' ref={ref}>
         <motion.div className='md:flex justify-around' animate={opacityAnimation}>
             <div className={props.additionalStyling +' md:max-w-[33%] mt-20'}>
                 <h1 className='font-bold text-5xl text-gray-700 tracking-wide'>

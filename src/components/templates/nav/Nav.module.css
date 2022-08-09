@@ -1,6 +1,7 @@
 .nav{
     transition: all 500ms ease;
     margin: 0 auto;
+    @apply flex flex-col right-[-100%] items-center justify-center w-screen h-screen bg-white fixed md:justify-between md:w-[1224px] md:h-12 md:right-0 md:left-0 md:flex-row md:rounded-full z-20 
 }
 @media only screen and (min-width: 764px) {
     .nav{

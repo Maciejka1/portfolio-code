@@ -28,3 +28,6 @@ code{
 .container{
   @apply xl:px-0 mx-auto px-2 max-w-[1424px]
 }
+.articleHeader{
+  @apply font-bold text-5xl
+}

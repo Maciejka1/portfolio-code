@@ -15,7 +15,7 @@ function Nav(){
                   <FaBars/>
               </div> 
           </div>
-          <nav className={"flex flex-col right-[-100%] items-center justify-center w-screen h-screen bg-white fixed md:justify-between md:w-[1224px] md:h-12 md:right-0 md:left-0 md:flex-row md:rounded-full z-20 " + styles.nav} style={{right: navControl}}> 
+          <nav className={styles.nav} style={{right: navControl}}> 
           <div className="md:h-full flex items-center z-30 md:static fixed m-2 top-0 left-0">
               <img src={logo} alt="logo" className="h-14 md:h-full rounded-none"/>
               <p className="ml-2 text-lg">Maciejka</p>
