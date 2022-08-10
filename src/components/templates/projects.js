@@ -11,8 +11,6 @@ export default function Projects(props){
             opacity: 1,
             transition: {duration: 0.7}
             }) : opacityAnimation.start({opacity: 0})
-
-            
     }, [inView, opacityAnimation])
     return(
         <article className='mt-[10vh] list-none' ref={ref}>

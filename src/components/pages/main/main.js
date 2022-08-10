@@ -30,10 +30,10 @@ export default function Main(){
     return(
         <motion.div
         className='container'
-         initial={{opacity: 0}}
-         animate={{opacity: 1, transition: {duration: 2}}}
-         exit={{opacity: 0}}
-         >
+        initial={{opacity: 0}}
+        animate={{opacity: 1, transition: {duration: 2}}}
+        exit={{opacity: 0}}
+        >
         <section>
             <div className="h-[100vh] flex justify-center items-center">
                     <motion.div className="max-w-[650px] "
@@ -74,7 +74,7 @@ export default function Main(){
                 desc="Mero Studios is a small group of passionate game developers. Right now they are working on Never Found game. Website was built with react and tailwindcss."
                 buttonColor="bg-gray-800 hover:bg-gray-900"
                 additionalStyling="sm:order-2"
-                isWorkInProgress = {true}
+                isWorkInProgress = {false}
                 code = "https://github.com/Maciejka1/mero-studios"
                 linkToWebsite = "https://mero-studios.vercel.app"
                 images={
