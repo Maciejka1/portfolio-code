@@ -19,9 +19,7 @@ export default function Projects(props){
                 <h1 className='font-bold text-5xl text-gray-700 tracking-wide'>
                     {props.title}
                 </h1>
-                <p className='text-red-500'>
-                    {props.isWorkInProgress && "Work in progress!"}
-                </p>
+                    {props.isWorkInProgress && <p className='text-red-500'>Work in progress!</p>}
                 <p className='text-2xl my-4'>
                     {props.desc}
                 </p>
