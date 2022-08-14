@@ -20,7 +20,7 @@ export default function Projects(props){
                     {props.title}
                 </h1>
                 <p className='text-red-500'>
-                    {props.isWorkInProgress ? "Work in progress!" : ""}
+                    {props.isWorkInProgress && "Work in progress!"}
                 </p>
                 <p className='text-2xl my-4'>
                     {props.desc}
