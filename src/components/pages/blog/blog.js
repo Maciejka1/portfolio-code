@@ -13,6 +13,7 @@ export default function Blog(){
             const data = await getDocs(postRef)
             setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
             setIsLoading(false)
+            
         }
     fetchPosts()
   }, [])
@@ -27,17 +28,17 @@ export default function Blog(){
               <div className="flex flex-wrap mt-12 gap-12">
                 {
                 isLoading ?
-                posts.map(() => {
+                posts.map((mockedData) => {
                     return(
                     <div className='rounded-3xl bg-white overflow-hidden shadow-2xl w-96 animate-pulse'>
                         <div className='h-[241px] bg-gray-400'></div>
                         <div className="p-5">
-                            <p className="bg-gray-400 rounded-full max-w-xl h-8 mb-4"></p>
-                            <h2 className="text-4xl font-bold max-w-full"></h2>
-                            <p className="bg-gray-400 rounded-full max-w-[150px] h-4 mb-4"></p>
-                            <p className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></p>
-                            <p className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></p>
-                            <p className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></p>
+                            <span className="bg-gray-400 rounded-full max-w-xl h-8 mb-4"></span>
+                            <span className="text-4xl font-bold max-w-full"></span>
+                            <span className="bg-gray-400 rounded-full max-w-[150px] h-4 mb-4"></span>
+                            <span className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></span>
+                            <span className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></span>
+                            <span className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></span>
                         </div>
                     </div>
                     )

@@ -112,17 +112,17 @@ export default function Main(){
             <div className='flex gap-20 overflow-x-scroll mt-5 py-16 md:px-16'>
                 {
                 isLoading ?
-                posts.map(() => {
+                posts.map((mockedData) => {
                     return(
                     <div className='hover:no-underline min-w-[400px] rounded-3xl bg-white overflow-hidden shadow-2xl animate-pulse'>
                         <div className='h-[241px] bg-gray-400'></div>
                         <div className="p-5">
-                            <p className="bg-gray-400 rounded-full max-w-xl h-8 mb-4"></p>
-                            <h2 className="text-4xl font-bold max-w-full"></h2>
-                            <p className="bg-gray-400 rounded-full max-w-[150px] h-4 mb-4"></p>
-                            <p className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></p>
-                            <p className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></p>
-                            <p className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></p>
+                            <span className="bg-gray-400 rounded-full max-w-xl h-8 mb-4"></span>
+                            <span className="text-4xl font-bold max-w-full"></span>
+                            <span className="bg-gray-400 rounded-full max-w-[150px] h-4 mb-4"></span>
+                            <span className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></span>
+                            <span className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></span>
+                            <span className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></span>
                         </div>
                     </div>
                     )
