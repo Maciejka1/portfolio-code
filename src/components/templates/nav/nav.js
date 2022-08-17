@@ -22,7 +22,6 @@ function Nav(){
           </div>
 
             <ul className="flex flex-col justify-items-center items-center mb-10 text-gray-700 gap-3 font-semibold text-4xl md:text-2xl md:mb-0 md:flex-row">
-
                 <Link to="/" onClick={resizeNavOnClick}>
                     <li className='transition-all hover:text-3xl'>Home</li>
                 </Link>

@@ -17,23 +17,25 @@ import { db } from "../../firebase/firebase-conf"
 import { getDocs, collection } from 'firebase/firestore'
 import GetInTouch from '../getintouch/getintouch'
 export default function Main(){
-    const [posts, setPosts] = useState([])
+    const [posts, setPosts] = useState(["mocked", "content", "for", "loading skeleton"])
+    const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
         const postRef = collection(db, "blog")
         const fetchPosts = async () => {
             const data = await getDocs(postRef)
             setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+            setIsLoading(false)
         }
     fetchPosts()
   }, [])
 
     return(
-        <motion.div
-        className='container'
-        initial={{opacity: 0}}
-        animate={{opacity: 1, transition: {duration: 2}}}
-        exit={{opacity: 0}}
-        >
+    <motion.div
+    className='container'
+    initial={{opacity: 0}}
+    animate={{opacity: 1, transition: {duration: 2}}}
+    exit={{opacity: 0}}
+    >
         <section>
             <div className="h-[100vh] flex justify-center items-center">
                     <motion.div className="max-w-[650px] "
@@ -55,7 +57,7 @@ export default function Main(){
             <Projects
                 title="Dziki staw"
                 desc="Dziki staw is a small sauna business that runs in my city.
-                I made them a website built with reactjs and tailwindcss for styling."
+                I made them a website built with Nextjs and tailwindcss for styling."
                 buttonColor="bg-green-300 hover:bg-green-400"
                 additionalStyling=""
                 isWorkInProgress = {false}
@@ -89,7 +91,25 @@ export default function Main(){
         <section className='mt-10'>
             <h1 className='header'>Check out my blog</h1>
             <div className='flex gap-20 overflow-x-scroll mt-5 py-16 md:px-16'>
-                {posts.map((data) => {
+                {
+                isLoading ?
+                posts.map(() => {
+                    return(
+                    <div className='hover:no-underline min-w-[400px] rounded-3xl bg-white overflow-hidden shadow-2xl animate-pulse'>
+                        <div className='h-[241px] bg-gray-400'></div>
+                        <div className="p-5">
+                            <p className="bg-gray-400 rounded-full max-w-xl h-8 mb-4"></p>
+                            <h2 className="text-4xl font-bold max-w-full"></h2>
+                            <p className="bg-gray-400 rounded-full max-w-[150px] h-4 mb-4"></p>
+                            <p className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></p>
+                            <p className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></p>
+                            <p className="bg-gray-400 rounded-full max-w-xl h-4 mb-4"></p>
+                        </div>
+                    </div>
+                    )
+                })
+                :
+                posts.map((data) => {
                     return(
                     <Link to={"/blog/" + data.title.split(" ").join("-").toLowerCase()} key={data.title} className='hover:no-underline min-w-[400px] rounded-3xl bg-white overflow-hidden shadow-2xl'>
                         <div>
@@ -102,12 +122,13 @@ export default function Main(){
                         </div>
                     </Link>
                     )
-                })}
+                })
+                }
             </div>
         </section>
         <section className='mt-10'>
             <GetInTouch/>
         </section>
-        </motion.div>
+    </motion.div>
     )
 }
