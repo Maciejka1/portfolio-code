@@ -6,6 +6,10 @@ import ipDS from '../../images/iphoneDS.png' // DS Dziki Staw
 import tabletDS from '../../images/tabletDS.png'
 import monitorDS from '../../images/monitorDS.png'
 
+import ipP from '../../images/iphoneP.png'
+import tabletP from '../../images/tabletP.png'
+import monitorP from '../../images/monitorP.png'
+
 import {motion} from 'framer-motion'
 import {FaArrowDown} from 'react-icons/fa'
 
@@ -61,7 +65,7 @@ export default function Main(){
                 buttonColor="bg-green-300 hover:bg-green-400"
                 additionalStyling=""
                 isWorkInProgress = {false}
-                code = "https://github.com/Maciejka1/dzikistaw-code"
+                code = "https://github.com/Maciejka1/dzikistaw-next"
                 linkToWebsite = "https://dzikistaw.pl"
                 images={
                     {
@@ -84,6 +88,21 @@ export default function Main(){
                         tablet: tabletMS,
                         monitor: monitorMS,
                         ip: ipMS
+                    }
+                }
+            />
+            <Projects
+                title="My portfolio"
+                desc="I created my portfolio using reactjs and tailwindcss. I am planning to port this website to Next js since it's faster and seo friendly."
+                buttonColor="bg-violet-500 hover:bg-violet-600"
+                isWorkInProgress = {false}
+                code = "https://github.com/Maciejka1/portfolio-code"
+                linkToWebsite = "https://mero-studios.vercel.app"
+                images={
+                    {
+                        tablet: tabletP,
+                        monitor: monitorP,
+                        ip: ipP
                     }
                 }
             />
