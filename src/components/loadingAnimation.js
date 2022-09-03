@@ -5,18 +5,22 @@ import {AnimatePresence} from 'framer-motion'
 import Blog from './pages/blog/blog'
 import BlogArticle from './templates/blogArticle/blogArticle'
 import Error from './templates/404'
+import "@fontsource/ubuntu"
+import "@fontsource/ubuntu/700.css"
 function LoadingAnimation(){
     const location = useLocation()
     return(
-    <AnimatePresence>
-        <Routes location={location} key={location.pathname}>
-            <Route path='/' element={<Main/>} />
-            <Route path='/contact' element={<GetInTouch/>} />
-            <Route path='/blog' element={<Blog/>}/>
-            <Route path='/blog/:id' element={<BlogArticle/>}/>
-            <Route path='*' element={<Error/>}/>
-        </Routes>
-    </AnimatePresence>
+    <div style={{fontFamily: "Ubuntu"}}>
+        <AnimatePresence>
+            <Routes location={location} key={location.pathname}>
+                <Route path='/' element={<Main/>} />
+                <Route path='/contact' element={<GetInTouch/>} />
+                <Route path='/blog' element={<Blog/>}/>
+                <Route path='/blog/:id' element={<BlogArticle/>}/>
+                <Route path='*' element={<Error/>}/>
+            </Routes>
+        </AnimatePresence>
+    </div>
     )
 }
 export default LoadingAnimation
