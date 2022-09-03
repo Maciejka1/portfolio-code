@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-a,p,h1,h2{
-  font-family: 'Poppins', sans-serif;
-}
+body { font-family: "Ubuntu", sans-serif; }
 html{
   scroll-behavior: smooth;
 }
