@@ -10,17 +10,15 @@ import "@fontsource/ubuntu/700.css"
 function LoadingAnimation(){
     const location = useLocation()
     return(
-    <div style={{fontFamily: "Ubuntu"}}>
-        <AnimatePresence>
-            <Routes location={location} key={location.pathname}>
-                <Route path='/' element={<Main/>} />
-                <Route path='/contact' element={<GetInTouch/>} />
-                <Route path='/blog' element={<Blog/>}/>
-                <Route path='/blog/:id' element={<BlogArticle/>}/>
-                <Route path='*' element={<Error/>}/>
-            </Routes>
-        </AnimatePresence>
-    </div>
+    <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+            <Route path='/' element={<Main/>} />
+            <Route path='/contact' element={<GetInTouch/>} />
+            <Route path='/blog' element={<Blog/>}/>
+            <Route path='/blog/:id' element={<BlogArticle/>}/>
+            <Route path='*' element={<Error/>}/>
+        </Routes>
+    </AnimatePresence>
     )
 }
 export default LoadingAnimation
